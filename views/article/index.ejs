@@ -1,0 +1,120 @@
+<%-include('../header')%>
+<style>
+    body {
+        width: 100vw;
+    }
+
+    .body-container {
+        padding-top: 56px;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 17vw;
+    }
+
+    .body-container {}
+
+    .body-container>h5 {
+        padding-top: 5vw;
+        height: 15vw;
+        line-height: 10vw;
+        font-size: 4.2vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .body-container>p {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        margin-bottom: 2px;
+        font-size: 3.2vw;
+        line-height: 4vw;
+        color: #777;
+        position: relative;
+        top: -0.3rem;
+    }
+
+    .body-container>p span {
+        width: 50%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .body-container>p span:first-child {
+        text-align: left;
+    }
+
+    .body-container>p span:last-child {
+        text-align: right;
+    }
+
+    .body-container-article {
+        padding-left: 4vw;
+        padding-right: 4vw;
+        padding-bottom: 4vw;
+        width: 100%;
+    }
+</style>
+<%-include('../loading')%>
+<div class="body-container">
+    <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div> -->
+    <%-include('../header-top-back')%>
+
+    <h5 class="article-title"></h5>
+    <p class="article-time clearfix">
+        <span class="fl"></span>
+        <span class="fr"></span>
+    </p>
+    <div class="body-container-article"></div>
+</div>
+<script>
+    $(function () {
+        const id = getQueryString("id")
+        console.log(getQueryString('id'))
+        // 文章阅读
+        $.ajax({
+            type: 'get',
+            url: '/article/item?id=' + id,
+            dataType: 'json',
+            success: function (data, textStatus) {
+                // debugger
+                if (data.code === '1') {
+                    $(".article-title").html(data.content.title)
+                    $(".body-container-article").html(data.content.body)
+                    // 牛逼的链式操作
+                    $(".article-time").find("span").eq(0).html(data.content.author).end().eq(1).html(data.content.createTime)
+
+                    $('.loading.loading-mask').fadeOut()
+                    //  $('.alert').alert()
+                } else {
+                    $('.loading.loading-mask').fadeOut()
+                    layer.open({
+                        content: data.msg || '未知错误'
+                        , skin: 'msg'
+                        , time: 2 //2秒后自动关闭
+                    });
+                }
+            },
+            error: function () {
+
+                $('.loading.loading-mask').fadeOut()
+                layer.open({
+                    content: "网络繁忙" || '未知错误'
+                    , skin: 'msg'
+                    , time: 2 //2秒后自动关闭
+                });
+            }
+        })
+    })
+</script>
+<%-include('../footer')%>

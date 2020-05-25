@@ -1,0 +1,83 @@
+<style>
+    header.header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 56px;
+        line-height: 56px;
+        width: 100%;
+        z-index: 11;
+        background: #fff;
+        text-align: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 1px 5px #ccc;
+    }
+
+    header.header .user {
+        height: 1.3rem;
+        width: 1.3rem;
+        margin-right: 0.1rem;
+        /* background: blue; */
+        display: inline-flex;
+        vertical-align: middle;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgb(211, 158, 0);
+        padding: 0.05rem;
+        box-sizing: border-box;
+        background: #fff;
+        position: absolute;
+        left: 1rem;
+
+    }
+
+    header.header .user u {
+        flex: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+        border-radius: 50%;
+    }
+    header.header ul li a{
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        position: relative;
+    }
+    header.header ul li a.active::after{
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        left: 20%;
+        width: 60%;
+        height: 2px;
+        background: #007bff;
+    }
+</style>
+<header class="header">
+    <i class="user">
+        <u style="background-image: url('/public/img/1.jpg')"></u>
+    </i>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#">关注</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">推荐</a>
+        </li>
+    </ul>
+
+</header>
+<script>
+    $(function () {
+    })
+</script>

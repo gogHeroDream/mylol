@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="shortcut icon" type="images/x-icon" href="/public/favicon.ico">
+    <link rel="stylesheet" href="/public/css/base.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/webfont.css">
+    <link rel="stylesheet" href="/public/fonts-al/iconfont.css">
+    <title>lol官网</title>
+
+    <script
+        src="https://sk-repo.oss-cn-beijing.aliyuncs.com/ueditor/kityformula-plugin/kityformula/js/jquery-1.11.0.min.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/layer.js"></script>
+    <script src="/public/js/fastclick.js"></script>
+    <!-- <script src="/public/js/lib-flex.js"></script> -->
+    <script>
+        // 获取路径内容
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+    </script>
+    <script>
+        $(function () {
+            FastClick.attach(document.body);
+        })
+    </script>
+
+</head>
+
+<body>

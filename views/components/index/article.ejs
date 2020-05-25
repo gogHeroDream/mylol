@@ -1,0 +1,92 @@
+<style>
+    /* 文章css */
+    .article-body {
+        padding-top: 5px;
+        padding: 5px 5px 0;
+    }
+
+    .article-body .article-item {}
+
+    .article-body .article-item .fl {
+        width: 70vw;
+    }
+
+    .article-body .article-item .fl h5 {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+
+    .article-body .article-item .fl h5 span {
+        padding-left: 2vw;
+        padding-right: 2vw;
+        background: #007bff;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 3vw;
+        height: 6vw;
+        vertical-align: top;
+    }
+
+    .article-body .article-item .fl div {
+        font-size: 2.5vw;
+        line-height: 4vw;
+        padding-left: 4px;
+    }
+
+    .article-body .article-item span+span {
+        margin-left: 5px;
+    }
+
+    .article-body .article-item .fr {
+        vertical-align: middle;
+        border-radius: 3px;
+        overflow: hidden;
+    }
+
+    .article-body .article-item .fr img {
+        height: 12vw;
+        width: 14vw;
+    }
+</style>
+<div class="list-group">
+    <!-- <button type="button" class="list-group-item list-group-item-action active">
+        Cras justo odio
+    </button> -->
+    <%if(Articles.length===0){%>
+    <p style="height: 30vh;line-height: 30vh;text-align: center;">暂无数据</p>
+    <%} else {%>
+    <%for(var i= 0;i< Articles.length; i++){%>
+    <%if(Articles[i].show){%>
+    <button play-id="<%=Articles[i].id%>" type="button"
+        class="list-group-item list-group-item-action clearfix article-item">
+        <a style="color:inherit" href="<%='/article?id='+Articles[i].id%>">
+            <div class="fl">
+                <h5>
+                    <%if(Articles[i].showTop){%>
+                    <span>置顶</span>
+                    <%}%>
+                    <%=Articles[i].title%>
+                </h5>
+                <div>
+                    <span><%=Articles[i].author%></span>
+                    <%if(Articles[i].remark.length>0){%>
+                    <span><%=Articles[i].remark.length%> 评论</span>
+                    <%}%>
+                        </div>
+                    </div>
+                    <%if(Articles[i].pic){%>
+                    <div class="fr">
+                        <img src="<%=Articles[i].pic%>" />
+                    </div>
+                    <%}%>
+               </a>
+                    
+            </button>
+            <%}%>
+                    <%}%>
+    <%}%>
+
+                    <!-- <button type="button" class="list-group-item list-group-item-action">Morbi leo risus</button>
+    <button type="button" class="list-group-item list-group-item-action">Porta ac consectetur ac</button>
+    <button type="button" class="list-group-item list-group-item-action" disabled>Vestibulum at eros</button> -->
+                </div>

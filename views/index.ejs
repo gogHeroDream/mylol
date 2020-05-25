@@ -1,0 +1,42 @@
+
+    <%-include('header')%>
+    <!-- <%-include('loading')%> -->
+    <style>
+        .body-container{
+            padding-top: 56px;
+            position: relative;
+            z-index: 1;
+            padding-bottom: 17vw;
+        }
+      
+    </style>
+    <div class="body-container">
+        <%-include('components/index/nav')%>
+        <!-- 搜索 -->
+        <%-include('components/index/search')%>
+        <!-- 轮播图 -->
+        <%-include('components/index/carousel')%>
+        <!-- 文章 -->
+        <div class="article-body">
+            <%-include('components/index/article')%> 
+        </div>  
+        
+    </div>
+    <script>
+        // $(function(){
+        //     // 文章阅读
+        //     $(".article-item").on('click',function(){
+        //         $.ajax({
+        //             type: 'get',
+        //             url: '/article/'+ $(this).attr('play-id'),
+        //             dataType: 'json',
+        //             success: function(data, textStatus){
+        //                 console.log(data)
+        //             }
+        //         })
+                
+        //     })
+        // })
+    </script>
+    <%-include('footer')%>
+

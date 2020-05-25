@@ -1,0 +1,224 @@
+/** 基础公共样式 **/
+/* CSS Document */
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  font-family: MicrosoftYaHei;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  list-style: none;
+  outline-style: none;
+  /*FF*/
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+
+
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  /*IE*/
+  outline-style: none;
+  /*FF*/
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix {
+  *zoom: 1;
+  /*IE/7/6*/
+}
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;
+}
+input,
+img,
+textarea,
+select {
+  vertical-align: middle;
+  border:0;
+}
+body,p,ul,ol,li,dl,dt,dd,form,h1,h2,h3,h4,h5,h6,input{
+  -webkit-text-size-adjust: 100%!important;
+}
+i{
+  font-style:normal;
+}
+u{
+  text-decoration:none;
+}
+b{
+  font-weight: 400;
+}
+input{
+  border-radius: 0;
+  outline:none;
+  width:100%;
+}
+a{
+  text-decoration:none;
+  color:#8c8c8c;
+}
+body.body{
+  background:#f6f6f6;
+  overflow-x: hidden;
+  margin: 0 auto;
+  min-width:320px;
+  -webkit-overflow-scrolling:touch;
+}
+*::-webkit-scrollbar {display:none}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+  height: 0;
+}
+.text-lf {
+  text-align:left;
+}
+.text-rg {
+  text-align:right;
+}
+.text-ct {
+  text-align:center;
+}
+a:hover,a:visited,a:active {
+  text-decoration: none;
+}
+.flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.center-box {
+  width: 90%;
+  margin: 0 auto;
+}
+@keyframes maskHide {
+  0%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@-webkit-keyframes maskHide {
+  0%{
+    opacity: 0.9;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
+
+

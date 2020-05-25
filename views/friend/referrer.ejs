@@ -1,0 +1,284 @@
+<%-include('../header')%>
+<style>
+    .body-container {
+        padding-top: 56px;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 17vw;
+    }
+
+    /* 热议区 */
+    .body-container .center-box {
+        font-size: 4vw;
+    }
+
+    .body-container .center-box .fl {
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .body-container .center-box .fr {
+        height: 45px;
+        line-height: 45px;
+    }
+
+    /* 热议图区 */
+    .box-card {
+        border-radius: 5px;
+        /* height: 28vw; */
+        background: rgb(211, 158, 0);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-card>p,
+    .box-card>span {
+        line-height: 8vw;
+        display: flex;
+        padding-left: 6vw;
+        padding-right: 6vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .box-card>p {
+        padding-top: 5vw;
+        padding-bottom: 1vw;
+        line-height: 6vw;
+        height: auto;
+        margin-bottom: 0;
+        font-size: 4.3vw;
+        color: #fff;
+    }
+
+    .box-card>span u {
+        font-size: 3vw;
+        color: #fff;
+    }
+
+    .box-card>span:first-of-type {
+        line-height: 6vw;
+        color: #fff;
+    }
+
+    .box-card>span i {
+
+        color: #1e7e34;
+        font-size: 14vw;
+    }
+
+    .box-card>span i:before {
+        background: #f8f9fa;
+    }
+
+    .box-card>span:last-child {
+        color: #ddd;
+        font-size: 2.8vw;
+    }
+
+    /* 热议话题 */
+    .hot-word {
+        margin-top: 2vw;
+        padding-bottom: 1vw;
+    }
+
+    .body-container .container .col-box {
+        padding-left: 0;
+        padding-right: 0;
+        line-height: 8vw;
+        color: #555;
+        font-size: 3.5vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .body-container .container .col-box i {
+        font-size: 3.5vw;
+    }
+
+    .body-container .container .col-box:nth-child(1) i {
+        color: #bd2130;
+    }
+
+    .body-container .container .col-box:nth-child(2) i {
+        color: #ff7907;
+    }
+
+    .body-container .container .col-box:nth-child(3) i {
+        color: rgba(211, 158, 0, 0.86);
+    }
+
+    .body-container .container .col-box:nth-child(4) i {
+        color: #aaa;
+    }
+
+    /* 中间分类区 */
+    .middle-nav {
+        border-top: 2px solid #eee;
+        line-height: 22vw;
+        height: 22vw;
+        border-bottom: 2px solid #eee;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .middle-nav>div{
+        display: inline-block;
+        width: 16vw;
+        height: 16vw;
+        border-radius: 8%;
+        overflow: hidden;
+        position: relative;
+    }
+    .middle-nav>div+div{
+        margin-left: 3vw;
+    }
+    .middle-nav>div img{
+        vertical-align: top;
+        width: 16vw;
+        height: 16vw;
+        position: relative;
+        z-index: 1;
+    }
+    .middle-nav>div u{
+        content: "";
+        position: absolute;
+        left:0;
+        top:0;
+        width: 16vw;
+        height: 16vw;
+        background:rgba(0,0,0,0.5);
+        z-index: 2;
+    }
+    .middle-nav>div i{
+        position: absolute;
+        z-index: 3;
+        bottom: 4vw;
+        left:0;
+        right:0;
+        margin: 0 auto;
+        font-size: 2vw;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        line-height: 3vw;
+        height: 3vw;
+    }
+     .middle-nav>div i::before{
+        content: "";
+        position: absolute;
+        left:0;
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        background: #fff;
+        z-index: 2;
+        bottom: -7px;
+        right:0;
+        margin: 0 auto;
+     }
+      .middle-nav>div i::after{
+        content: "";
+        position: absolute;
+        left:0;
+        width: 50%;
+        height: 1px;
+        background: #fff;
+        z-index: 1;
+        bottom: -5px;
+        right:0;
+        margin: 0 auto;
+     }
+</style>
+<div class="body-container">
+    <%-include('../components/friend/header')%>
+    <!-- 热议区 -->
+    <p class="center-box clearfix">
+        <span class="fl">正在热议</span>
+        <i class="dripicons-chevron-right fr"></i>
+    </p>
+    <div class="center-box box-card">
+        <p>奇葩说·补刀是真滴难啊</p>
+        <span>
+            <i class="iconfont iconhuodongjinhangzhong"></i>
+        </span>
+        <span>
+            319人已参加
+        </span>
+    </div>
+    <div class="hot-word ">
+        <div class="center-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-box col-sm-6 col-6">
+                        <i class="iconfont icongongzuojing"></i>
+                        阿木木的峡谷故事
+                    </div>
+                    <div class="col-sm-6 col-6 col-box">
+                        <i class="iconfont icongongzuojing"></i>
+                        云顶简单粗暴阵容
+                    </div>
+                    <div class="col-sm-6 col-6 col-box">
+                        <i class="iconfont icongongzuojing"></i>
+                        话不多说，ban位见
+                    </div>
+                    <div class="col-sm-6 col-6 col-box">
+                        <i class="iconfont icongongzuojing"></i>
+                        查看更多话题
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middle-nav">
+        <div>
+            <img src="/public/img/0.jpg" alt="">
+            <u></u>
+            <i>英雄攻略</i>
+        </div>
+        <div>
+            <img src="/public/img/1.jpg" alt="">
+            <u></u>
+            <i>大区talk</i>
+        </div>
+        <div>
+            <img src="/public/img/2.jpg" alt="">
+            <u></u>
+            <i>萌次元</i>
+        </div>
+        <div>
+            <img src="/public/img/3.jpg" alt="">
+            <u></u>
+            <i>俱乐部</i>
+        </div>
+        <div>
+            <img src="/public/img/0.jpg" alt="">
+            <u></u>
+            <i>全部分类</i>
+        </div>
+    </div>
+
+</div>
+<script>
+        // $(function(){
+        //     // 文章阅读
+        //     $(".article-item").on('click',function(){
+        //         $.ajax({
+        //             type: 'get',
+        //             url: '/article/'+ $(this).attr('play-id'),
+        //             dataType: 'json',
+        //             success: function(data, textStatus){
+        //                 console.log(data)
+        //             }
+        //         })
+
+        //     })
+        // })
+</script>
+<%-include('../footer')%>

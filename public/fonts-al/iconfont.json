@@ -1,0 +1,30 @@
+{
+  "id": "1840728",
+  "name": "wzry",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "lol node test",
+  "glyphs": [
+    {
+      "icon_id": "11058962",
+      "name": "工作井",
+      "font_class": "gongzuojing",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "9231141",
+      "name": "活动进行中",
+      "font_class": "huodongjinhangzhong",
+      "unicode": "e75a",
+      "unicode_decimal": 59226
+    },
+    {
+      "icon_id": "2452830",
+      "name": "拼团活动进行中",
+      "font_class": "pintuanhuodongjinhangzhong",
+      "unicode": "e721",
+      "unicode_decimal": 59169
+    }
+  ]
+}

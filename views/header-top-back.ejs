@@ -1,0 +1,64 @@
+<style>
+    header.header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 56px;
+        line-height: 56px;
+        width: 100%;
+        z-index: 11;
+        background: #fff;
+        text-align: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 1px 5px #ccc;
+    }
+
+    header.header i {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 1.2rem;
+        width: 56px;
+        height: 56px;
+        line-height: 56px;
+
+    }
+
+    header.header i::before {
+        vertical-align: middle;
+        position: relative;
+        top: -1px;
+        left: 2vw;
+    }
+
+    header.header span {
+        width: calc(100vw - 112px);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        /* width: 18px; */
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+    }
+</style>
+<header class="header">
+    <i class="header-top dripicons-chevron-left"></i>
+    <span>
+        <%=pageTitle%>
+    </span>
+
+</header>
+<script>
+    $(function(){
+        $(".header-top.dripicons-chevron-left").click(function(){
+            history.go(-1)
+        })
+    })
+</script>
